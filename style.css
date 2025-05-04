@@ -154,7 +154,7 @@
   background-color: #b28328;
 }
 
-/* Responsive: en pantallas pequeñas, columnas apilan */
+/* Responsivo: tablets y móviles grandes */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -163,7 +163,47 @@
   .right-column {
     padding-top: 1rem;
   }
+
+  /* Galería a 2 columnas */
+  .product-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Imágenes un poco más anchas para ocupar espacio */
+  .product-img {
+    width: 70%;
+  }
+
+  /* Info-box se adapta al ancho del contenedor */
+  .info-box {
+    width: 90%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
+
+/* Responsivo: móviles pequeños (smartphones estrechos) */
+@media (max-width: 480px) {
+  /* Galería a 1 columna */
+  .product-gallery {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  /* Imágenes más grandes y centradas */
+  .product-img {
+    width: 80%;
+  }
+
+  /* Info-box ocupa casi todo el ancho */
+  .info-box {
+    width: 95%;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+}
+
 /* Restaurar formato original del panel de productos */
 .product-section {
   margin-bottom: 2rem;
